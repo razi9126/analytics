@@ -1,15 +1,6 @@
 const monk=require('monk');
 //const url='mongodb://localhost:27018'
-const url='mongodb://restaurants-mongodb-replicaset-0.restaurants-mongodb-replicaset:27017,restaurants-mongodb-replicaset-1.restaurants-mongodb-replicaset:27017,restaurants-mongodb-replicaset-2.restaurants-mongodb-replicaset:27017/restaurants?replicaSet=rs0&slaveOk=true'
-RestaurantProvider = function(host, port) {
-    this.db=monk(url)
-    this.db.then(()=>{
-        console.log('connected to the database');
-    }).catch((err)=>{
-        console.log('not connected to the database')
-        console.log(err);
-    });
-}
+
 RestaurantProvider.prototype.houseKeeping = function(callback){
     var initialScore = {
         '1':0,

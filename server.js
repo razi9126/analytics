@@ -17,25 +17,6 @@ con.connect(function(err) {
   });
 });
 
-const aws = require('aws-sdk');
-const s3 = new aws.S3({accessKeyId:'AKIAIHWAMWKCMMJYGUZA',secretAccessKey:'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'});
-const restify=require('restify');
-const RestaurantProvider=require('./restaurantprovider').RestaurantProvider;
-const restaurantProvider = new RestaurantProvider();
-const server=restify.createServer();
-const bucketName='paitoo-restaurants';
-const kafka=require('kafka-node');
-const client=new kafka.Client('zookeeper.kafka:2181');
-const HighLevelProducer=kafka.HighLevelProducer;
-const producer=new HighLevelProducer(client);
-const Consumer = kafka.Consumer;
-const restaurantConsumer= new Consumer(client,[]);
-const retry = require('retry');
-const PATTERN = RegExp('[^/]*$');
-const fs = require('fs');
-const axios = require('axios');
-const corsMiddleware = require('restify-cors-middleware');
-const bunyan = require('bunyan');
 var operation = retry.operation({
     forver: true,
 });
