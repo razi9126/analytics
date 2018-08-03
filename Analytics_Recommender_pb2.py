@@ -17,9 +17,9 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='Analytics_Recommender.proto',
-  package='Paitoo',
+  package='paitoo',
   syntax='proto3',
-  serialized_pb=_b('\n\x1b\x41nalytics_Recommender.proto\x12\x06Paitoo\"\x1d\n\x05Query\x12\x14\n\x0cqueryMessage\x18\x01 \x01(\t\"\xba\x01\n\x06Review\x12\x13\n\x0buploader_id\x18\x01 \x01(\t\x12\x11\n\treview_id\x18\x02 \x01(\t\x12\x11\n\tdish_name\x18\x03 \x01(\t\x12\x15\n\rrestaurant_id\x18\x04 \x01(\t\x12\x0f\n\x07service\x18\x05 \x01(\x05\x12\x10\n\x08\x61mbience\x18\x06 \x01(\x05\x12\x13\n\x0b\x63leanliness\x18\x07 \x01(\x05\x12\r\n\x05taste\x18\x08 \x01(\x05\x12\x17\n\x0fvalue_for_money\x18\t \x01(\x08\"?\n\x0cLiked_Review\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x1e\n\x06review\x18\x02 \x01(\x0b\x32\x0e.Paitoo.Review\";\n\x11\x46ollow_Restaurant\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x15\n\rrestaurant_id\x18\x02 \x01(\t\"k\n\x0bOpened_Dish\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x15\n\rrestaurant_id\x18\x02 \x01(\t\x12\x10\n\x08\x64ishname\x18\x03 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x04 \x01(\t\x12\x10\n\x08searched\x18\x05 \x01(\x08\x32\xf9\x01\n\tAnalytics\x12\x35\n\x12GetUploadedReviews\x12\r.Paitoo.Query\x1a\x0e.Paitoo.Review0\x01\x12\x38\n\x0fGetLikedReviews\x12\r.Paitoo.Query\x1a\x14.Paitoo.Liked_Review0\x01\x12\x44\n\x16GetFollowedRestaurants\x12\r.Paitoo.Query\x1a\x19.Paitoo.Follow_Restaurant0\x01\x12\x35\n\rGetOpenedDish\x12\r.Paitoo.Query\x1a\x13.Paitoo.Opened_Dish0\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1b\x41nalytics_Recommender.proto\x12\x06paitoo\"\x1d\n\x05Query\x12\x14\n\x0cqueryMessage\x18\x01 \x01(\t\"\xba\x01\n\x06Review\x12\x13\n\x0buploader_id\x18\x01 \x01(\t\x12\x11\n\treview_id\x18\x02 \x01(\t\x12\x11\n\tdish_name\x18\x03 \x01(\t\x12\x15\n\rrestaurant_id\x18\x04 \x01(\t\x12\x0f\n\x07service\x18\x05 \x01(\x05\x12\x10\n\x08\x61mbience\x18\x06 \x01(\x05\x12\x13\n\x0b\x63leanliness\x18\x07 \x01(\x05\x12\r\n\x05taste\x18\x08 \x01(\x05\x12\x17\n\x0fvalue_for_money\x18\t \x01(\x08\"?\n\x0cLiked_Review\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x1e\n\x06review\x18\x02 \x01(\x0b\x32\x0e.paitoo.Review\";\n\x11\x46ollow_Restaurant\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x15\n\rrestaurant_id\x18\x02 \x01(\t\"k\n\x0bOpened_Dish\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x15\n\rrestaurant_id\x18\x02 \x01(\t\x12\x10\n\x08\x64ishname\x18\x03 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x04 \x01(\t\x12\x10\n\x08searched\x18\x05 \x01(\x08\x32\xf9\x01\n\tAnalytics\x12\x35\n\x12GetUploadedReviews\x12\r.paitoo.Query\x1a\x0e.paitoo.Review0\x01\x12\x38\n\x0fGetLikedReviews\x12\r.paitoo.Query\x1a\x14.paitoo.Liked_Review0\x01\x12\x44\n\x16GetFollowedRestaurants\x12\r.paitoo.Query\x1a\x19.paitoo.Follow_Restaurant0\x01\x12\x35\n\rGetOpenedDish\x12\r.paitoo.Query\x1a\x13.paitoo.Opened_Dish0\x01\x62\x06proto3')
 )
 
 
@@ -27,13 +27,13 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _QUERY = _descriptor.Descriptor(
   name='Query',
-  full_name='Paitoo.Query',
+  full_name='paitoo.Query',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='queryMessage', full_name='Paitoo.Query.queryMessage', index=0,
+      name='queryMessage', full_name='paitoo.Query.queryMessage', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -58,69 +58,69 @@ _QUERY = _descriptor.Descriptor(
 
 _REVIEW = _descriptor.Descriptor(
   name='Review',
-  full_name='Paitoo.Review',
+  full_name='paitoo.Review',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='uploader_id', full_name='Paitoo.Review.uploader_id', index=0,
+      name='uploader_id', full_name='paitoo.Review.uploader_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='review_id', full_name='Paitoo.Review.review_id', index=1,
+      name='review_id', full_name='paitoo.Review.review_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dish_name', full_name='Paitoo.Review.dish_name', index=2,
+      name='dish_name', full_name='paitoo.Review.dish_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='restaurant_id', full_name='Paitoo.Review.restaurant_id', index=3,
+      name='restaurant_id', full_name='paitoo.Review.restaurant_id', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='service', full_name='Paitoo.Review.service', index=4,
+      name='service', full_name='paitoo.Review.service', index=4,
       number=5, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ambience', full_name='Paitoo.Review.ambience', index=5,
+      name='ambience', full_name='paitoo.Review.ambience', index=5,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='cleanliness', full_name='Paitoo.Review.cleanliness', index=6,
+      name='cleanliness', full_name='paitoo.Review.cleanliness', index=6,
       number=7, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='taste', full_name='Paitoo.Review.taste', index=7,
+      name='taste', full_name='paitoo.Review.taste', index=7,
       number=8, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value_for_money', full_name='Paitoo.Review.value_for_money', index=8,
+      name='value_for_money', full_name='paitoo.Review.value_for_money', index=8,
       number=9, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -145,20 +145,20 @@ _REVIEW = _descriptor.Descriptor(
 
 _LIKED_REVIEW = _descriptor.Descriptor(
   name='Liked_Review',
-  full_name='Paitoo.Liked_Review',
+  full_name='paitoo.Liked_Review',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='user_id', full_name='Paitoo.Liked_Review.user_id', index=0,
+      name='user_id', full_name='paitoo.Liked_Review.user_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='review', full_name='Paitoo.Liked_Review.review', index=1,
+      name='review', full_name='paitoo.Liked_Review.review', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -183,20 +183,20 @@ _LIKED_REVIEW = _descriptor.Descriptor(
 
 _FOLLOW_RESTAURANT = _descriptor.Descriptor(
   name='Follow_Restaurant',
-  full_name='Paitoo.Follow_Restaurant',
+  full_name='paitoo.Follow_Restaurant',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='user_id', full_name='Paitoo.Follow_Restaurant.user_id', index=0,
+      name='user_id', full_name='paitoo.Follow_Restaurant.user_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='restaurant_id', full_name='Paitoo.Follow_Restaurant.restaurant_id', index=1,
+      name='restaurant_id', full_name='paitoo.Follow_Restaurant.restaurant_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -221,41 +221,41 @@ _FOLLOW_RESTAURANT = _descriptor.Descriptor(
 
 _OPENED_DISH = _descriptor.Descriptor(
   name='Opened_Dish',
-  full_name='Paitoo.Opened_Dish',
+  full_name='paitoo.Opened_Dish',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='user_id', full_name='Paitoo.Opened_Dish.user_id', index=0,
+      name='user_id', full_name='paitoo.Opened_Dish.user_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='restaurant_id', full_name='Paitoo.Opened_Dish.restaurant_id', index=1,
+      name='restaurant_id', full_name='paitoo.Opened_Dish.restaurant_id', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dishname', full_name='Paitoo.Opened_Dish.dishname', index=2,
+      name='dishname', full_name='paitoo.Opened_Dish.dishname', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='category', full_name='Paitoo.Opened_Dish.category', index=3,
+      name='category', full_name='paitoo.Opened_Dish.category', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='searched', full_name='Paitoo.Opened_Dish.searched', index=4,
+      name='searched', full_name='paitoo.Opened_Dish.searched', index=4,
       number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -288,35 +288,35 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 Query = _reflection.GeneratedProtocolMessageType('Query', (_message.Message,), dict(
   DESCRIPTOR = _QUERY,
   __module__ = 'Analytics_Recommender_pb2'
-  # @@protoc_insertion_point(class_scope:Paitoo.Query)
+  # @@protoc_insertion_point(class_scope:paitoo.Query)
   ))
 _sym_db.RegisterMessage(Query)
 
 Review = _reflection.GeneratedProtocolMessageType('Review', (_message.Message,), dict(
   DESCRIPTOR = _REVIEW,
   __module__ = 'Analytics_Recommender_pb2'
-  # @@protoc_insertion_point(class_scope:Paitoo.Review)
+  # @@protoc_insertion_point(class_scope:paitoo.Review)
   ))
 _sym_db.RegisterMessage(Review)
 
 Liked_Review = _reflection.GeneratedProtocolMessageType('Liked_Review', (_message.Message,), dict(
   DESCRIPTOR = _LIKED_REVIEW,
   __module__ = 'Analytics_Recommender_pb2'
-  # @@protoc_insertion_point(class_scope:Paitoo.Liked_Review)
+  # @@protoc_insertion_point(class_scope:paitoo.Liked_Review)
   ))
 _sym_db.RegisterMessage(Liked_Review)
 
 Follow_Restaurant = _reflection.GeneratedProtocolMessageType('Follow_Restaurant', (_message.Message,), dict(
   DESCRIPTOR = _FOLLOW_RESTAURANT,
   __module__ = 'Analytics_Recommender_pb2'
-  # @@protoc_insertion_point(class_scope:Paitoo.Follow_Restaurant)
+  # @@protoc_insertion_point(class_scope:paitoo.Follow_Restaurant)
   ))
 _sym_db.RegisterMessage(Follow_Restaurant)
 
 Opened_Dish = _reflection.GeneratedProtocolMessageType('Opened_Dish', (_message.Message,), dict(
   DESCRIPTOR = _OPENED_DISH,
   __module__ = 'Analytics_Recommender_pb2'
-  # @@protoc_insertion_point(class_scope:Paitoo.Opened_Dish)
+  # @@protoc_insertion_point(class_scope:paitoo.Opened_Dish)
   ))
 _sym_db.RegisterMessage(Opened_Dish)
 
@@ -324,7 +324,7 @@ _sym_db.RegisterMessage(Opened_Dish)
 
 _ANALYTICS = _descriptor.ServiceDescriptor(
   name='Analytics',
-  full_name='Paitoo.Analytics',
+  full_name='paitoo.Analytics',
   file=DESCRIPTOR,
   index=0,
   options=None,
@@ -333,7 +333,7 @@ _ANALYTICS = _descriptor.ServiceDescriptor(
   methods=[
   _descriptor.MethodDescriptor(
     name='GetUploadedReviews',
-    full_name='Paitoo.Analytics.GetUploadedReviews',
+    full_name='paitoo.Analytics.GetUploadedReviews',
     index=0,
     containing_service=None,
     input_type=_QUERY,
@@ -342,7 +342,7 @@ _ANALYTICS = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetLikedReviews',
-    full_name='Paitoo.Analytics.GetLikedReviews',
+    full_name='paitoo.Analytics.GetLikedReviews',
     index=1,
     containing_service=None,
     input_type=_QUERY,
@@ -351,7 +351,7 @@ _ANALYTICS = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetFollowedRestaurants',
-    full_name='Paitoo.Analytics.GetFollowedRestaurants',
+    full_name='paitoo.Analytics.GetFollowedRestaurants',
     index=2,
     containing_service=None,
     input_type=_QUERY,
@@ -360,7 +360,7 @@ _ANALYTICS = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetOpenedDish',
-    full_name='Paitoo.Analytics.GetOpenedDish',
+    full_name='paitoo.Analytics.GetOpenedDish',
     index=3,
     containing_service=None,
     input_type=_QUERY,

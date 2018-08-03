@@ -15,22 +15,22 @@ class AnalyticsStub(object):
       channel: A grpc.Channel.
     """
     self.GetUploadedReviews = channel.unary_stream(
-        '/Paitoo.Analytics/GetUploadedReviews',
+        '/paitoo.Analytics/GetUploadedReviews',
         request_serializer=Analytics__Recommender__pb2.Query.SerializeToString,
         response_deserializer=Analytics__Recommender__pb2.Review.FromString,
         )
     self.GetLikedReviews = channel.unary_stream(
-        '/Paitoo.Analytics/GetLikedReviews',
+        '/paitoo.Analytics/GetLikedReviews',
         request_serializer=Analytics__Recommender__pb2.Query.SerializeToString,
         response_deserializer=Analytics__Recommender__pb2.Liked_Review.FromString,
         )
     self.GetFollowedRestaurants = channel.unary_stream(
-        '/Paitoo.Analytics/GetFollowedRestaurants',
+        '/paitoo.Analytics/GetFollowedRestaurants',
         request_serializer=Analytics__Recommender__pb2.Query.SerializeToString,
         response_deserializer=Analytics__Recommender__pb2.Follow_Restaurant.FromString,
         )
     self.GetOpenedDish = channel.unary_stream(
-        '/Paitoo.Analytics/GetOpenedDish',
+        '/paitoo.Analytics/GetOpenedDish',
         request_serializer=Analytics__Recommender__pb2.Query.SerializeToString,
         response_deserializer=Analytics__Recommender__pb2.Opened_Dish.FromString,
         )
@@ -93,5 +93,5 @@ def add_AnalyticsServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'Paitoo.Analytics', rpc_method_handlers)
+      'paitoo.Analytics', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))
