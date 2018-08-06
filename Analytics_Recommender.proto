@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package Paitoo;
+package paitoo;
 
 service Analytics{
 	
@@ -34,7 +34,7 @@ message Liked_Review {
 	string user_id = 1;
 	Review review = 2;
 }
-
+// The record of when a user follows a restaurant
 message Follow_Restaurant {
 	string user_id = 1;
 	string restaurant_id = 2;
