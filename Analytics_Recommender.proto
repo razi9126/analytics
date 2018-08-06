@@ -16,17 +16,18 @@ service Analytics{
 message Query{
 	string queryMessage = 1;
 }
+
 // The record of a review
 message Review {
 	string uploader_id = 1;
 	string review_id = 2;
-	string dish_name = 3;
-	string restaurant_id = 4;
-	int32 service = 5;
-	int32 ambience = 6;
-	int32 cleanliness = 7;
-	int32 taste = 8;
-	bool value_for_money = 9;
+	string restaurant_id = 3;
+	int32 service = 4;
+	int32 ambience = 5;
+	int32 cleanliness = 6;
+	string dish_name = 7;
+	bool value_for_money = 8;
+	int32 taste = 9;
 }
 
 // The record of when a user likes a review

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='Analytics_Recommender.proto',
   package='paitoo',
   syntax='proto3',
-  serialized_pb=_b('\n\x1b\x41nalytics_Recommender.proto\x12\x06paitoo\"\x1d\n\x05Query\x12\x14\n\x0cqueryMessage\x18\x01 \x01(\t\"\xba\x01\n\x06Review\x12\x13\n\x0buploader_id\x18\x01 \x01(\t\x12\x11\n\treview_id\x18\x02 \x01(\t\x12\x11\n\tdish_name\x18\x03 \x01(\t\x12\x15\n\rrestaurant_id\x18\x04 \x01(\t\x12\x0f\n\x07service\x18\x05 \x01(\x05\x12\x10\n\x08\x61mbience\x18\x06 \x01(\x05\x12\x13\n\x0b\x63leanliness\x18\x07 \x01(\x05\x12\r\n\x05taste\x18\x08 \x01(\x05\x12\x17\n\x0fvalue_for_money\x18\t \x01(\x08\"?\n\x0cLiked_Review\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x1e\n\x06review\x18\x02 \x01(\x0b\x32\x0e.paitoo.Review\";\n\x11\x46ollow_Restaurant\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x15\n\rrestaurant_id\x18\x02 \x01(\t\"k\n\x0bOpened_Dish\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x15\n\rrestaurant_id\x18\x02 \x01(\t\x12\x10\n\x08\x64ishname\x18\x03 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x04 \x01(\t\x12\x10\n\x08searched\x18\x05 \x01(\x08\x32\xf9\x01\n\tAnalytics\x12\x35\n\x12GetUploadedReviews\x12\r.paitoo.Query\x1a\x0e.paitoo.Review0\x01\x12\x38\n\x0fGetLikedReviews\x12\r.paitoo.Query\x1a\x14.paitoo.Liked_Review0\x01\x12\x44\n\x16GetFollowedRestaurants\x12\r.paitoo.Query\x1a\x19.paitoo.Follow_Restaurant0\x01\x12\x35\n\rGetOpenedDish\x12\r.paitoo.Query\x1a\x13.paitoo.Opened_Dish0\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1b\x41nalytics_Recommender.proto\x12\x06paitoo\"\x1d\n\x05Query\x12\x14\n\x0cqueryMessage\x18\x01 \x01(\t\"\xba\x01\n\x06Review\x12\x13\n\x0buploader_id\x18\x01 \x01(\t\x12\x11\n\treview_id\x18\x02 \x01(\t\x12\x15\n\rrestaurant_id\x18\x03 \x01(\t\x12\x0f\n\x07service\x18\x04 \x01(\x05\x12\x10\n\x08\x61mbience\x18\x05 \x01(\x05\x12\x13\n\x0b\x63leanliness\x18\x06 \x01(\x05\x12\x11\n\tdish_name\x18\x07 \x01(\t\x12\x17\n\x0fvalue_for_money\x18\x08 \x01(\x08\x12\r\n\x05taste\x18\t \x01(\x05\"?\n\x0cLiked_Review\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x1e\n\x06review\x18\x02 \x01(\x0b\x32\x0e.paitoo.Review\";\n\x11\x46ollow_Restaurant\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x15\n\rrestaurant_id\x18\x02 \x01(\t\"k\n\x0bOpened_Dish\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x15\n\rrestaurant_id\x18\x02 \x01(\t\x12\x10\n\x08\x64ishname\x18\x03 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x04 \x01(\t\x12\x10\n\x08searched\x18\x05 \x01(\x08\x32\xf9\x01\n\tAnalytics\x12\x35\n\x12GetUploadedReviews\x12\r.paitoo.Query\x1a\x0e.paitoo.Review0\x01\x12\x38\n\x0fGetLikedReviews\x12\r.paitoo.Query\x1a\x14.paitoo.Liked_Review0\x01\x12\x44\n\x16GetFollowedRestaurants\x12\r.paitoo.Query\x1a\x19.paitoo.Follow_Restaurant0\x01\x12\x35\n\rGetOpenedDish\x12\r.paitoo.Query\x1a\x13.paitoo.Opened_Dish0\x01\x62\x06proto3')
 )
 
 
@@ -78,51 +78,51 @@ _REVIEW = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dish_name', full_name='paitoo.Review.dish_name', index=2,
+      name='restaurant_id', full_name='paitoo.Review.restaurant_id', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='restaurant_id', full_name='paitoo.Review.restaurant_id', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='service', full_name='paitoo.Review.service', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='service', full_name='paitoo.Review.service', index=4,
+      name='ambience', full_name='paitoo.Review.ambience', index=4,
       number=5, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ambience', full_name='paitoo.Review.ambience', index=5,
+      name='cleanliness', full_name='paitoo.Review.cleanliness', index=5,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='cleanliness', full_name='paitoo.Review.cleanliness', index=6,
-      number=7, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='dish_name', full_name='paitoo.Review.dish_name', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='taste', full_name='paitoo.Review.taste', index=7,
-      number=8, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='value_for_money', full_name='paitoo.Review.value_for_money', index=8,
-      number=9, type=8, cpp_type=7, label=1,
+      name='value_for_money', full_name='paitoo.Review.value_for_money', index=7,
+      number=8, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='taste', full_name='paitoo.Review.taste', index=8,
+      number=9, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
