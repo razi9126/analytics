@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package Paitoo;
+
+service Analytics{
+	
+	rpc GetUploadedReviews(Query) returns (stream Review);
+
+	rpc GetLikedReviews(Query) returns (stream Liked_Review);
+
+	rpc GetFollowedRestaurants(Query) returns (stream Follow_Restaurant);
+
+	rpc GetOpenedDish(Query) returns (stream Opened_Dish);
+}
+
+message Query{
+	string queryMessage = 1;
+}
+// The record of a review
+message Review {
+	string uploader_id = 1;
+	string review_id = 2;
+	string dish_name = 3;
+	string restaurant_id = 4;
+	int32 service = 5;
+	int32 ambience = 6;
+	int32 cleanliness = 7;
+	int32 taste = 8;
+	bool value_for_money = 9;
+}
+
+// The record of when a user likes a review
+message Liked_Review { 
+	string user_id = 1;
+	Review review = 2;
+}
+
+message Follow_Restaurant {
+	string user_id = 1;
+	string restaurant_id = 2;
+}
+
+message Opened_Dish { 
+	string user_id = 1;
+	string restaurant_id = 2;
+	string dishname = 3;
+	string category = 4;
+	bool searched = 5;
+}
